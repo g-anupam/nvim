@@ -46,9 +46,9 @@ return {
 			["pyright"] = function()
 				lspconfig.pyright.setup({ capabilities = capabilities })
 			end,
-			--["clangd"] = function()
-			--lspconfig.clangd.setup({ capabilities = capabilities })
-			--end,
+			["clangd"] = function()
+				lspconfig.clangd.setup({ capabilities = capabilities })
+			end,
 			["gopls"] = function()
 				lspconfig.gopls.setup({ capabilities = capabilities })
 			end,
@@ -65,6 +65,30 @@ return {
 						},
 					},
 				})
+			end,
+			["html"] = function()
+				lspconfig.html.setup({ capabilities = capabilities })
+			end,
+			["cssls"] = function()
+				lspconfig.cssls.setup({ capabilities = capabilities })
+			end,
+			["emmet_ls"] = function()
+				lspconfig.emmet_ls.setup({
+					capabilities = capabilities,
+					filetypes = { "html", "css", "javascriptreact", "typescriptreact" },
+				})
+			end,
+			["ts_ls"] = function()
+				lspconfig.ts_ls.setup({ capabilities = capabilities })
+			end,
+			["eslint"] = function()
+				lspconfig.eslint.setup({ capabilities = capabilities })
+			end,
+			["jsonls"] = function()
+				lspconfig.jsonls.setup({ capabilities = capabilities })
+			end,
+			["tailwindcss"] = function()
+				lspconfig.tailwindcss.setup({ capabilities = capabilities })
 			end,
 		})
 	end,

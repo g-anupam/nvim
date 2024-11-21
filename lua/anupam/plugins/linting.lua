@@ -5,18 +5,18 @@ return {
 		local lint = require("lint")
 
 		lint.linters_by_ft = {
-			javascript = { "eslint_d" },
-			typescript = { "eslint_d" },
-			javascriptreact = { "eslint_d" },
-			typescriptreact = { "eslint_d" },
-			python = { "pylint" },
-			lua = { "luacheck" }, -- Added Lua linter
-			c = { "cppcheck" }, -- Added C/C++ linter
-			cpp = { "cppcheck" },
-			go = { "golangci-lint" }, -- Go linter
-			rust = { "rust-analyzer" },
-			html = { "tidy" }, -- HTML linter
-			css = { "stylelint" }, -- CSS linter
+			-- javascript = { "eslint_d" },
+			-- typescript = { "eslint_d" },
+			-- javascriptreact = { "eslint_d" },
+			-- typescriptreact = { "eslint_d" },
+			-- python = { "pylint" },
+			-- lua = { "luacheck" }, -- Added Lua linter
+			-- c = { "cppcheck" }, -- Added C/C++ linter
+			-- cpp = { "cppcheck" },
+			-- go = { "golangci-lint" }, -- Go linter
+			-- rust = { "rust-analyzer" },
+			-- html = { "tidy" }, -- HTML linter
+			-- css = { "stylelint" }, -- CSS linter
 		}
 
 		local lint_augroup = vim.api.nvim_create_augroup("lint", { clear = true })

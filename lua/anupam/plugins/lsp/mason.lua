@@ -24,7 +24,7 @@ return {
 		mason_lspconfig.setup({
 			ensure_installed = {
 				"pyright", -- Python
-				--"clangd", -- C/C++
+				"clangd", -- C/C++
 				"gopls", -- Go
 				"rust_analyzer", -- Rust
 				"html", -- HTML
@@ -50,7 +50,7 @@ return {
 				"black", -- Python formatter
 				"isort", -- Python formatter
 				"pylint", -- Python linter
-				--"clang-format", -- C/C++ formatter
+				"clang-format", -- C/C++ formatter
 				"eslint_d", -- JS linter
 				"stylua", -- Lua formatter
 				"gofumpt", -- Go formatter

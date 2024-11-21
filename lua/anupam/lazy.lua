@@ -12,7 +12,15 @@ end
 
 vim.opt.rtp:prepend(lazypath)
 
-require("lazy").setup({ { import = "anupam.plugins" } }, {
+require("lazy").setup({
+  -- Plugin specifications
+  { import = "anupam.plugins" },
+  { import = "anupam.plugins.lsp" },
+
+  -- Options for lazy.nvim
+  defaults = {
+    lazy = true,
+  },
   checker = {
     enabled = true,
     notify = false,

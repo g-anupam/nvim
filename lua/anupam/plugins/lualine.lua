@@ -5,41 +5,43 @@ return {
 		local lualine = require("lualine")
 		local lazy_status = require("lazy.status") -- Ensure lazy.nvim is installed
 
+		-- Gruvbox-inspired colors
 		local colors = {
-			blue = "#65D1FF",
-			green = "#3EFFDC",
-			violet = "#FF61EF",
-			yellow = "#FFDA7B",
-			red = "#FF4A4A",
-			fg = "#c3ccdc",
-			bg = "#112638",
-			inactive_bg = "#2c3043",
-			semilightgray = "#5c6370", -- Replacing undefined color
+			bg = "#282828", -- Dark background
+			fg = "#ebdbb2", -- Light foreground
+			yellow_orange = "#d79921", -- Signature Gruvbox yellow-orange
+			cyan = "#8ec07c",
+			green = "#b8bb26",
+			magenta = "#d3869b",
+			blue = "#83a598",
+			red = "#fb4934",
+			inactive_bg = "#3c3836", -- Slightly lighter for inactive
+			semilightgray = "#928374", -- Neutral for inactive
 		}
 
 		local my_lualine_theme = {
 			normal = {
-				a = { bg = colors.blue, fg = colors.bg, gui = "bold" },
+				a = { bg = colors.yellow_orange, fg = colors.bg, gui = "bold" }, -- Highlighted
 				b = { bg = colors.bg, fg = colors.fg },
 				c = { bg = colors.bg, fg = colors.fg },
 			},
 			insert = {
-				a = { bg = colors.green, fg = colors.bg, gui = "bold" },
+				a = { bg = colors.yellow_orange, fg = colors.bg, gui = "bold" }, -- Highlighted
 				b = { bg = colors.bg, fg = colors.fg },
 				c = { bg = colors.bg, fg = colors.fg },
 			},
 			visual = {
-				a = { bg = colors.violet, fg = colors.bg, gui = "bold" },
+				a = { bg = colors.yellow_orange, fg = colors.bg, gui = "bold" }, -- Highlighted
 				b = { bg = colors.bg, fg = colors.fg },
 				c = { bg = colors.bg, fg = colors.fg },
 			},
 			command = {
-				a = { bg = colors.yellow, fg = colors.bg, gui = "bold" },
+				a = { bg = colors.yellow_orange, fg = colors.bg, gui = "bold" }, -- Highlighted
 				b = { bg = colors.bg, fg = colors.fg },
 				c = { bg = colors.bg, fg = colors.fg },
 			},
 			replace = {
-				a = { bg = colors.red, fg = colors.bg, gui = "bold" },
+				a = { bg = colors.yellow_orange, fg = colors.bg, gui = "bold" }, -- Highlighted
 				b = { bg = colors.bg, fg = colors.fg },
 				c = { bg = colors.bg, fg = colors.fg },
 			},
@@ -60,7 +62,7 @@ return {
 					{
 						lazy_status.updates,
 						cond = lazy_status.has_updates,
-						color = { fg = "#ff9e64" },
+						color = { fg = colors.yellow_orange },
 					},
 					{ "encoding" },
 					{ "fileformat" },
