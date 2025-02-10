@@ -14,6 +14,7 @@ return {
 			fg = "#c3ccdc",
 			bg = "#112638",
 			inactive_bg = "#2c3043",
+			semilightgray = "A0A8B7",
 		}
 
 		local my_lualine_theme = {
@@ -55,6 +56,7 @@ return {
 				theme = my_lualine_theme,
 			},
 			sections = {
+				lualine_b = {},
 				lualine_x = {
 					{
 						lazy_status.updates,
