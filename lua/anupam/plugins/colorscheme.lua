@@ -14,6 +14,16 @@ return {
 						all = {
 							ui = {
 								bg_gutter = "none",
+								bg = "#181616",
+								bg_dark = "#13110f",
+								bg_highlight = "#24221e",
+								fg = "#C4C1B9",
+								syntax = {
+									comment = "#8C7F70",
+									keyword = "#E46876",
+									string = "A1B56C",
+									operator = "#E6B673",
+								},
 							},
 						},
 					},
